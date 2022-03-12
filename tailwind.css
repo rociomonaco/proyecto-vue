@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@public components{
+    .bg-primary{
+        @apply bg-gradient-to-br
+        from-purple-100
+        to-pink-200
+        via-cyan-100;
+    }
+}
