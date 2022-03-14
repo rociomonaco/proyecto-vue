@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/tailwind.css" rel="stylesheet">
   <link href="css/estilos.css" rel="stylesheet">
+  <link href="css/estilos-2.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/0aa6304a5a.js" crossorigin="anonymous"></script>
-  <script src="/src/main.js"></script>
 </head>
-<body  class="bg-slate-900">
+<body id="app" class="bg-slate-900">
   <main class="flex">
       <!-- header -->
       <header class="">
@@ -73,10 +73,7 @@
               <!-- food products -->
               <div class="mt-24 w-full flex flex-row">
                 <!--/ item -->
-                <ItemProduct 
-                    v-for="p in products"
-                >
-                </ItemProduct>
+                <item-product/>
                 <!--/ item -->
                   
                   

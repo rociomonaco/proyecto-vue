@@ -1,14 +1,20 @@
 <template>
   <!-- item -->
   <div
-    class="w-2/5 p-5 item bg-slate-900 rounded-lg text-stone-50 mx-2 cursor-pointer">
+    class="
+      w-2/5
+      p-5
+      item
+      bg-slate-900
+      rounded-lg
+      text-stone-50
+      mx-2
+      cursor-pointer
+    "
+  >
     <!-- img -->
     <div class="relative w-full">
-      <img
-        class="absolute -top-20 left-8"
-        src=""
-        alt="product #1"
-      />
+      <img class="absolute -top-20 left-8" src="" alt="product #1" />
     </div>
     <!--/ img -->
 
@@ -32,7 +38,7 @@ export default {
     categoria: String,
     imagen: String,
     stock: Number,
-    seleccionado: Boolean
+    seleccionado: Boolean,
   },
 };
 </script>
