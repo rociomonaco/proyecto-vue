@@ -14,15 +14,15 @@
   >
     <!-- img -->
     <div class="relative w-full">
-      <img class="absolute -top-20 left-8" src="" alt="product #1" />
+      <img class="absolute -top-20 left-8" :src="require('@/'+imagen + '')" alt="product #1" />
     </div>
     <!--/ img -->
 
     <!-- text details -->
     <div class="mt-20 text-center">
-      <h3 class="px-8 mb-2">Spicy seasoned seafood noodles</h3>
-      <p class="my-2">$ 2.29</p>
-      <p class="text-neutral-300 my-2">20 Bowls available</p>
+      <h3 class="px-8 mb-2">{{nombre}}</h3>
+      <p class="my-2">$ {{precio}}</p>
+      <p class="text-neutral-300 my-2">{{stock}} Bowls available</p>
     </div>
     <!--/ text details -->
   </div>
@@ -45,18 +45,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.containerListProducts{
+    width: 60%;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.headerListProducts, .categoryProducts{
+    width: 100%;
+    color: #fff;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.containerSearch{
+    background-color: #2d303e;
 }
-a {
-  color: #42b983;
+.tb_search{
+    background-color: transparent;
+    outline: none;
 }
+
+.containerCart{
+    width: 35%;
+}
+
+
 </style>

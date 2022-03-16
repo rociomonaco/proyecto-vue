@@ -1,60 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <item-product v-for="p in products" :key="p.index"></item-product>
-  </div>
+  <main class="flex">
+    <div id="app">
+      <item-navegation></item-navegation>
+      <container-products></container-products>
+      <login-item></login-item>
+    </div>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import ItemProduct from './components/ItemProduct.vue'
+import ItemNavegation from './components/ItemNavegation.vue'
+import ContainerProducts from './components/ContainerProducts.vue'
+import LoginItem from './components/login/LoginItem.vue'
+
 
 
 export default {
   name: 'App',  
   components: {
-    HelloWorld,
-    ItemProduct
+    ItemNavegation,
+    ContainerProducts,
+    LoginItem
   },
-    data() {
-    return {
-      products: [
-        {
-          nombre: "Spicy seasoned seafood noodles",
-          precio: 250,
-          imagen: "./assets/products/product-1.png",
-          categoria: "",
-          stock: 20,
-        },
-        {
-          nombre: "Spicy seasoned seafood noodles",
-          precio: 250,
-          imagen: "./assets/products/product-1.png",
-          categoria: "",
-          stock: 20,
-        },
-        {
-          nombre: "Spicy seasoned seafood noodles",
-          precio: 250,
-          imagen: "./assets/products/product-1.png",
-          categoria: "",
-          stock: 20,
-        },
-      ],
-    };
-  },
+ 
 
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
 }
 </style>
