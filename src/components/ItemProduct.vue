@@ -11,8 +11,8 @@
       mx-2
       cursor-pointer
     "
+    @click="seleccionado = !seleccionado"
   >
-  <!--     @click="seleccionado = !seleccionado" -->
     <!-- img -->
     <div class="relative w-full">
       <img
@@ -32,8 +32,8 @@
         <p>{{cantidad}}</p>
 
         <div>
-          <!-- <button class="px-2 mx-1" @click.stop="cantidad++">+</button>
-          <button class="px-2 mx-1" @click.stop="cantidad--" :disabled="cantidad == 0">-</button> -->
+          <button class="px-2 mx-1" @click.stop="cantidad++">+</button>
+          <button class="px-2 mx-1" @click.stop="cantidad--" :disabled="cantidad == 0">-</button>
         </div>
       </div>
     </div>
