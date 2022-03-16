@@ -12,17 +12,30 @@
       cursor-pointer
     "
   >
+  <!--     @click="seleccionado = !seleccionado" -->
     <!-- img -->
     <div class="relative w-full">
-      <img class="absolute -top-20 left-8" :src="require('@/'+imagen + '')" alt="product #1" />
+      <img
+        class="absolute -top-20 left-8"
+        :src="require('@/' + imagen + '')"
+        alt="product #1"
+      />
     </div>
     <!--/ img -->
 
     <!-- text details -->
     <div class="mt-20 text-center">
-      <h3 class="px-8 mb-2">{{nombre}}</h3>
-      <p class="my-2">$ {{precio}}</p>
-      <p class="text-neutral-300 my-2">{{stock}} Bowls available</p>
+      <h3 class="px-8 mb-2">{{ nombre }}</h3>
+      <p class="my-2">$ {{ precio }}</p>
+      <p class="text-neutral-300 my-2">{{ stock }} Bowls available</p>
+      <div class="flex flex-col items-center justify-center" v-if="seleccionado">
+        <p>{{cantidad}}</p>
+
+        <div>
+          <!-- <button class="px-2 mx-1" @click.stop="cantidad++">+</button>
+          <button class="px-2 mx-1" @click.stop="cantidad--" :disabled="cantidad == 0">-</button> -->
+        </div>
+      </div>
     </div>
     <!--/ text details -->
   </div>
@@ -38,31 +51,32 @@ export default {
     categoria: String,
     imagen: String,
     stock: Number,
+    cantidad: Number,
     seleccionado: Boolean,
+
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.containerListProducts{
-    width: 60%;
+.containerListProducts {
+  width: 60%;
 }
-.headerListProducts, .categoryProducts{
-    width: 100%;
-    color: #fff;
+.headerListProducts,
+.categoryProducts {
+  width: 100%;
+  color: #fff;
 }
-.containerSearch{
-    background-color: #2d303e;
+.containerSearch {
+  background-color: #2d303e;
 }
-.tb_search{
-    background-color: transparent;
-    outline: none;
-}
-
-.containerCart{
-    width: 35%;
+.tb_search {
+  background-color: transparent;
+  outline: none;
 }
 
-
+.containerCart {
+  width: 35%;
+}
 </style>

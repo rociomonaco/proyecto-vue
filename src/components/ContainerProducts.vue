@@ -39,7 +39,7 @@
               <!-- food products -->
               <div class="mt-24 w-full flex flex-row">
                 <!--/ item -->
-                 <item-product v-for="p in products" :key="p.index" :nombre="p.nombre" :imagen="p.imagen" :precio="p.precio" :stock="p.stock"></item-product>
+                 <item-product v-for="p in products" :key="p.index" :nombre="p.nombre" :imagen="p.imagen" :precio="p.precio" :stock="p.stock" :cantidad="p.cantidad" :seleccionado="p.seleccionado"></item-product>
                 <!--/ item -->
                   
                   
@@ -69,6 +69,8 @@ export default {
           imagen: "assets/products/product-1.png",
           categoria: "",
           stock: 20,
+          cantidad: 0,
+          seleccion: false
         },
         {
           nombre: "Spicy seasoned seafood noodles",
@@ -76,6 +78,8 @@ export default {
           imagen: "assets/products/product-1.png",
           categoria: "",
           stock: 20,
+          cantidad: 0,
+          seleccion: false
         },
         {
           nombre: "Spicy seasoned seafood noodles",
@@ -83,6 +87,8 @@ export default {
           imagen: "assets/products/product-1.png",
           categoria: "",
           stock: 20,
+          cantidad: 0,
+          seleccion: false          
         },
       ],
     };

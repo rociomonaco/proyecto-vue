@@ -1,21 +1,22 @@
 <template>
-  <main class="flex">
-    <div id="app">
+  <main id="app">
+    <div class="flex">
       <item-navegation></item-navegation>
       <container-products></container-products>
-      <item-cart></item-cart>
-      <login-item></login-item>
-      <register-form></register-form>
-  
+      <container-cart></container-cart>
     </div>
+    <login-form></login-form>
+    <register-form></register-form>
+
   </main>
 </template>
 
 <script>
 import ItemNavegation from './components/ItemNavegation.vue'
 import ContainerProducts from './components/ContainerProducts.vue'
-import ItemCart from './components/ItemCart.vue'
-import LoginItem from './components/forms/LoginForm.vue'
+import ContainerCart from './components/ContainerCart.vue'
+
+import LoginForm from './components/forms/LoginForm.vue'
 import RegisterForm from './components/forms/RegisterForm.vue'
 
 
@@ -27,11 +28,10 @@ export default {
   components: {
     ItemNavegation,
     ContainerProducts,
-    LoginItem,
+    LoginForm,
     RegisterForm,
-    ItemCart,
+    ContainerCart,
   },
- 
 
 }
 </script>
