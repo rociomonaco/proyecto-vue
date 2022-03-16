@@ -55,6 +55,28 @@
         </div>
         <!-- msg all fields are required -->
 
+
+
+        <!-- NOTE: Entrega form -->
+        <table class="table-fixed" v-if="go">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>UserName</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{surname}}</td>
+                    <td>{{username}}</td>
+                    <td>{{phone}}</td>
+                </tr>
+            </tbody>
+        </table>
+
         
     </section>
   
@@ -80,7 +102,7 @@ export default {
         validate(){
             this.go = "";
             if(this.name != "" && this.surname != "" && this.phone != "" && this.password != "" && this.passwordMatch != "" ) {
-                return this.go = true
+                this.go = true;
             }else{
                 return this.go = false;
             }
